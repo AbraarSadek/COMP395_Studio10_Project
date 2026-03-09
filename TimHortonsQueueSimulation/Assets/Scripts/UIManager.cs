@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
@@ -31,6 +32,11 @@ public class UIManager : MonoBehaviour {
 
         speedLabel.text = "Sim Speed: " + value.ToString("F1") + "x";
     
+    }
+
+    public void ResetSimulation()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
